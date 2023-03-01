@@ -1,0 +1,47 @@
+
+
+
+
+<div class="d-flex flex-wrap justify-content-evenly">
+  <div *ngFor="let card of cards">
+
+      <div class="card card-structure my-3">
+          <img [src]="card.image" class="card-img-top image" alt="...">
+          <div class="card-body">
+              <div class="card-img-overlay wishlist-icon">
+                  <span><i class="fa-duotone fa-heart"></i></span>
+              </div>
+              <div class="d-flex justify-content-between">
+                  <h5 class="card-title content">
+                      {{ card.title }}
+                  </h5>
+                  <h5 class="text-muted ms-5">
+                      ${{ card.price }}
+                  </h5>
+              </div>
+              <div class="d-flex">
+                  <ul class="d-flex text-decoration-none list-unstyled">
+                      <li><i class="fa fa-star checked"></i></li>
+                      <li><i class="fa fa-star checked"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                  </ul>
+
+                  <h6 class="mt-1"> ({{card.rating.rate}})</h6>
+              </div> 
+              <p>{{card.category}}</p>
+              <p class="content">{{card.description}}</p>
+            
+              <div class="add-cart-button">
+                  <button href="#" class="btn btn-primary">Add to Cart</button>
+
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+
+ 
